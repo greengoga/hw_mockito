@@ -1,12 +1,12 @@
 package ru.netology.hw_mockito;
 
-public class MovieList {
+public class Movie {
     private int id;
     private int movieId;
     private String movieName;
     private String movieGenre;
 
-    public MovieList(int id, int movieId, String movieName, String movieGenre) {
+    public Movie(int id, int movieId, String movieName, String movieGenre) {
         this.id = id;
         this.movieId = movieId;
         this.movieName = movieName;

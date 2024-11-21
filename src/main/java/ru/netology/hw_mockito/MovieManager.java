@@ -1,7 +1,7 @@
 package ru.netology.hw_mockito;
 
 public class MovieManager {
-    private MovieList[] items = new MovieList[0];
+    private Movie[] items = new Movie[0];
     private int limit;
 
     public MovieManager() {
@@ -12,8 +12,8 @@ public class MovieManager {
         this.limit = limit;
     }
 
-    public void add(MovieList item) {
-        MovieList[] tmp = new MovieList[items.length + 1];
+    public void add(Movie item) {
+        Movie[] tmp = new Movie[items.length + 1];
         for (int i = 0; i < items.length; i++) {
             tmp[i] = items[i];
         }
@@ -21,13 +21,13 @@ public class MovieManager {
         items = tmp;
     }
 
-    public MovieList[] findAll() {
+    public Movie[] findAll() {
         return items;
     }
 
-    public MovieList[] findLast() {
+    public Movie[] findLast() {
         int resultLength = Math.min(items.length, limit);
-        MovieList[] result = new MovieList[resultLength];
+        Movie[] result = new Movie[resultLength];
         for (int i = 0; i < result.length; i++) {
             result[i] = items[items.length - 1 - i];
         }
